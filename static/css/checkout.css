@@ -1,0 +1,96 @@
+/* ===== BODY ===== */
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#f8f5f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+/* ===== CHECKOUT BOX ===== */
+
+.checkout-box{
+    width:820px;
+    height: 820px;
+    background:#ffffff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    border:2px solid #d7ccc8;
+}
+
+/* ===== TITLE ===== */
+
+h1{
+    text-align:center;
+    color:#6d4c41;
+    margin-bottom:25px;
+    font-size: 60px;
+}
+
+/* ===== INPUTS ===== */
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:42px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:36px;
+    box-sizing:border-box;
+}
+
+/* ===== TEXTAREA ===== */
+
+textarea{
+    height:100px;
+    resize:none;
+}
+
+/* ===== BUTTON ===== */
+
+button{
+    width:100%;
+    padding:12px;
+    background:#8d6e63;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:60px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#6d4c41;
+}
+
+.back-btn{
+    display: block;
+    width: 180px;
+    margin: 20px auto;
+    text-align: center;
+    background: #8B5E3C;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:500px){
+
+.checkout-box{
+    width:80%;
+    padding:20px;
+}
+
+}

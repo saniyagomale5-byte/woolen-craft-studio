@@ -1,0 +1,120 @@
+/* ===== BODY ===== */
+
+body{
+    margin:0;
+    padding:30px;
+    background:#f8f5f2;
+    font-family:Arial, sans-serif;
+}
+
+/* ===== HEADING ===== */
+
+h1{
+    text-align:center;
+    color:#6d4c41;
+    margin-bottom:30px;
+    font-size: 70px;
+}
+
+/* ===== TABLE ===== */
+
+table{
+    width:90%;
+    margin:auto;
+    border-collapse:collapse;
+    background:#ffffff;
+    border-radius:12px;
+    overflow:hidden;
+    font-size: 60px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* ===== HEADER ===== */
+
+th{
+    background:#8d6e63;
+    color:white;
+    padding:15px;
+}
+
+/* ===== ROW ===== */
+
+td{
+    text-align:center;
+    padding:15px;
+    border-bottom:1px solid #ddd;
+    font-size: 40px;
+}
+
+tr:hover{
+    background:#f9f1ec;
+}
+
+/* ===== IMAGE ===== */
+
+td img{
+    width:300px;
+    border-radius:10px;
+}
+
+/* ===== BUTTON ===== */
+
+button{
+    background:#8d6e63;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:40px;
+}
+
+button:hover{
+    background:#6d4c41;
+}
+
+/* ===== TOTAL ===== */
+
+h2{
+    text-align:center;
+    color:#5d4037;
+    margin-top:20px;
+    font-size: 40px;
+}
+
+/* ===== CHECKOUT BUTTON ===== */
+
+a{
+    text-decoration:none;
+
+}
+
+a:last-child{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+}
+
+a:last-child button{
+    padding:12px 30px;
+    font-size:40px;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+table{
+    width:100%;
+}
+
+th,td{
+    padding:10px;
+    font-size:14px;
+}
+
+button{
+    padding:6px 12px;
+}
+
+}

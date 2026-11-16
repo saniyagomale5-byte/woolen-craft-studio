@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/order.css') }}">
+</head>
+<body>
+
+<h1>📦 My Orders</h1>
+
+{% if orders %}
+
+<table border="1" cellpadding="10">
+
+<tr>
+    <th>Product</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Status</th>
+</tr>
+
+{% for order in orders %}
+
+<tr>
+    <td>{{ order.product_name }}</td>
+    <td>₹{{ order.price }}</td>
+    <td>{{ order.quantity }}</td>
+    <td>{{ order.status }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="{{ url_for('shop') }}">
+    <button>Continue Shopping</button>
+</a>
+
+{% else %}
+
+<h2>No Orders Yet 📦</h2>
+
+<a href="{{ url_for('shop') }}">
+    <button>Shop Now</button>
+</a>
+
+{% endif %}
+
+</body>
+</html>

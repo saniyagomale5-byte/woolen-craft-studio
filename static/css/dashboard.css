@@ -1,0 +1,157 @@
+/* ===== BODY ===== */
+
+body{
+    margin:0;
+    padding:0;
+    font-family:'Poppins',sans-serif;
+    background:#f5f0ea;
+}
+
+/* ===== DASHBOARD ===== */
+
+.dashboard{
+    width:90%;
+    margin:30px auto;
+}
+
+/* ===== HEADER ===== */
+
+.dashboard h1{
+    text-align:center;
+    color:#6d4c41;
+    margin-bottom:10px;
+    font-size: 50px;
+}
+
+.dashboard p{
+    text-align:center;
+    color:#777;
+    margin-bottom:30px;
+    font-size: 40px;
+}
+
+/* ===== STATISTICS ===== */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:40px;
+}
+
+.card{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h2{
+    color:#8d6e63;
+    font-size:45px;
+    margin-bottom:2px;
+}
+
+.card span{
+    font-size:68px;
+    color:#555;
+}
+
+/* ===== MENU ===== */
+
+.menu{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-bottom:40px;
+}
+
+.menu a{
+    text-decoration:none;
+    background:#8d6e63;
+    color:white;
+    text-align:center;
+    padding:18px;
+    border-radius:12px;
+    font-size:58px;
+    transition:.3s;
+}
+
+.menu a:hover{
+    background:#6d4c41;
+    transform:scale(1.02);
+}
+
+/* ===== RECENT ORDERS ===== */
+
+.recent{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.recent h2{
+    color:#6d4c41;
+    margin-bottom:20px;
+    font-size: 32px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#8d6e63;
+    color:white;
+    font-size: 30px;
+    padding:15px;
+}
+
+td{
+    text-align:center;
+    font-size: 25px;
+    padding:15px;
+    border-bottom:1px solid #ddd;
+}
+
+tr:hover{
+    background:#f9f1ec;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+.stats{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.menu{
+    grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:500px){
+
+.stats{
+    grid-template-columns:1fr;
+}
+
+.dashboard h1{
+    font-size:25px;
+}
+
+.card h2{
+    font-size:28px;
+}
+
+}

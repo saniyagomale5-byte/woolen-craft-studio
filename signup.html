@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Woolen Craft Studio</title>
+
+    <link rel="stylesheet" href="{{ url_for('static, filename='css/signup.css')}}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Left Side -->
+    <div class="left-panel">
+        <div class="overlay">
+
+            <div class="logo">
+                <i class="fa-solid fa-heart"></i>
+                <h2>Woolen Craft Studio</h2>
+            </div>
+
+            <h1>Create Your Account</h1>
+
+            <p>
+                Join our handmade woolen craft community and discover
+                beautiful handmade products created by skilled artisans.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="right-panel">
+
+        <div class="form-box">
+
+            <h2>Sign Up</h2>
+
+            <p class="subtitle">
+                Create a new account
+            </p>
+
+            <form id="signupForm" action="http://127.0.0.1:5000/signup" method="POST">
+
+                <div class="input-box">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text"
+                    name="name"
+                    id="fullname"
+                    placeholder="Full Name"
+                    required>
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required>
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                    required>
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password"
+                    name="confirm_password"
+                    id="confirmPassword"
+                    placeholder="Confirm Password"
+                    required>
+                </div>
+
+                <button type="submit">
+                    Create Account
+                </button>
+
+                <div class="divider">OR</div>
+
+                <div class="social-login">
+
+                    <button type="button" class="google">
+                        <i class="fa-brands fa-google"></i>
+                        Google
+                    </button>
+
+                    <button type="button" class="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        Facebook
+                    </button>
+
+                </div>
+
+                <p class="signup-text">
+                    Already have an account?
+                    <a href="signin.html">Sign In</a>
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+placeholder="Confirm Password">
+
+
+<script src="signup.js"></script>
+
+</body>
+</html>

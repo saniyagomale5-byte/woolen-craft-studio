@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout</title>
+
+<link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+<div class="checkout-container">
+
+    <div class="billing">
+        <h2>Billing Details</h2>
+
+        <form>
+            <input type="text" placeholder="Full Name" required>
+
+            <input type="email" placeholder="Email Address" required>
+
+            <input type="text" placeholder="Phone Number" required>
+
+            <textarea placeholder="Full Address" rows="4"></textarea>
+
+            <input type="text" placeholder="City">
+
+            <input type="text" placeholder="State">
+
+            <input type="text" placeholder="Pincode">
+
+            <select>
+                <option>Cash on Delivery</option>
+                <option>UPI</option>
+                <option>Credit Card</option>
+                <option>Debit Card</option>
+            </select>
+        </form>
+    </div>
+
+    <div class="order-summary">
+
+        <h2>Order Summary</h2>
+
+        <div class="item">
+            <span>Rainbow Wall Hanging</span>
+            <span>₹499</span>
+        </div>
+
+        <div class="item">
+            <span>Macrame Basket</span>
+            <span>₹799</span>
+        </div>
+
+        <hr>
+
+        <div class="item">
+            <strong>Total</strong>
+            <strong>₹1298</strong>
+        </div>
+
+        <button>Place Order</button>
+
+    </div>
+
+</div>
+<script src="checkout.js"></script>
+
+</body>
+</html>

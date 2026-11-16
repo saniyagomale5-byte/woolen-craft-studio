@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Woolen Craft Studio</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/shop.css') }}">
+</head>
+<body>
+
+<header>
+
+    <h1>🧶 Woolen Craft Studio</h1>
+
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('cart') }}">Cart</a>
+        <a href="{{ url_for('wishlist') }}">Wishlist</a>
+        <a href="{{ url_for('orders') }}">My Orders</a>
+        <a href="{{ url_for('profile') }}">Profile</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </nav>
+
+</header>
+
+<h2>Our Products</h2>
+
+<div class="products">
+
+    {% for product in products %}
+
+    <div class="card">
+
+        <img src="{{ url_for('static', filename='images/' ~ product.image) }}" alt="{{ product.name }}">
+        <h3>{{ product.name }}</h3>
+
+        <p>₹{{ product.price }}</p>
+
+        <a href="{{ url_for('product_details', id=product.id) }}">
+            <button>View Details</button>
+        </a>
+
+        <a href="{{ url_for('add_to_cart', id=product.id) }}">
+            <button>Add to Cart</button>
+        </a>
+
+        <a href="{{ url_for('add_to_wishlist', id=product.id) }}">
+            <button>❤️ Wishlist</button>
+        </a>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+</body>
+</html>

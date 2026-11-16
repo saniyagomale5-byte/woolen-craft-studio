@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woolen Craft Studio</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🧶 Woolen Craft Studio
+    </div>
+
+    <div class="search-box">
+        <form action="/search" method="GET">
+            <input type="text" name="q" placeholder="Search Products...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+</header>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/cart">Cart</a>
+    <a href="/wishlist">Wishlist</a>
+    <a href="/orders">My Orders</a>
+    <a href="/profile">Profile</a>
+    <a href="/logout">Logout</a>
+</nav>
+
+<section class="hero">
+    <h1>Handmade Woolen Crafts</h1>
+
+    <p>
+        Beautiful handmade crochet flowers, wall hangings,
+        dream catchers and home decor products.
+    </p>
+
+    <a href="/shop">Shop Now</a>
+</section>
+
+<h2 class="products-title">Featured Products</h2>
+
+<div class="products">
+
+{% for product in products %}
+
+<div class="card">
+
+    <img src="{{ url_for('static', filename='images/' ~ product.image) }}" alt="{{ product.name }}">
+
+    <h3>{{ product.name }}</h3>
+
+    <p class="price">₹{{ product.price }}</p>
+
+    <p>{{ product.description }}</p>
+
+    <a href="/product/{{ product.id }}">
+        <button>View Details</button>
+    </a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+<footer>
+    <p>© 2026 Woolen Craft Studio | Handmade with ❤️</p>
+</footer>
+
+</body>
+</html>

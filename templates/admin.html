@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+
+<h1>🛠️ Admin Dashboard</h1>
+
+<div class="buttons">
+    <a href="/add-product">
+        <button>➕ Add Product</button>
+    </a>
+
+    <a href="{{ url_for('admin_orders') }}">
+        <button>📦 View Orders</button>
+    </a>
+</div>
+
+<br><br>
+
+<table border="1" cellpadding="10">
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Action</th>
+</tr>
+
+{% for product in products %}
+<tr>
+    <td>{{ product.id }}</td>
+    <td>{{ product.name }}</td>
+    <td>₹{{ product.price }}</td>
+    <td>
+        <a href="/edit-product/{{ product.id }}">
+            <button>Edit</button>
+        </a>
+        <a href="/delete-product/{{ product.id}}"><button>Delete</button></a>
+    </td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+
+
+<br>
+
+<div class="back-btn">
+    <a href="/dashboard">
+        <button>⬅ Back</button>
+    </a>
+</div>
+
+</body>
+</html>

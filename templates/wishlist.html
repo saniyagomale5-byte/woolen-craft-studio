@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Wishlist</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/wishlist.css') }}">
+</head>
+<body>
+
+<h1>❤️ My Wishlist</h1>
+
+{% if products %}
+
+{% for product in products %}
+
+<div>
+
+    <img src="{{ url_for('static', filename='images/' + product.image) }}" width="150">
+
+    <h3>{{ product.name }}</h3>
+
+    <p>₹{{ product.price }}</p>
+
+    <a href="/product/{{ product.id }}">
+        <button>View Product</button>
+    </a>
+
+    <a href="/remove-wishlist/{{ product.id }}">
+        <button>🗑️ Remove</button>
+    </a>
+
+</div>
+
+<hr>
+
+{% endfor %}
+
+{% else %}
+
+<h2>Your Wishlist is Empty ❤️</h2>
+
+{% endif %}
+
+<a href="/shop">
+    <button>Back To Shop</button>
+</a>
+
+</body>
+</html>

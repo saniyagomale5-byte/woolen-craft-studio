@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:#f8f6f2;
+}
+
+.checkout-container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+    display:flex;
+    gap:30px;
+}
+
+.billing{
+    flex:2;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.billing h2{
+    margin-bottom:20px;
+}
+
+.billing form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.billing input,
+.billing textarea,
+.billing select{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.order-summary{
+    flex:1;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    height:fit-content;
+}
+
+.order-summary h2{
+    margin-bottom:20px;
+}
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    margin:15px 0;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    background:#8B5E3C;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+button:hover{
+    background:#6e472d;
+}
+
+@media(max-width:768px){
+
+.checkout-container{
+    flex-direction:column;
+}
+
+}

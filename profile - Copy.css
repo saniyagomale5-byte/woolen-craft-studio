@@ -1,0 +1,129 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f8f6f2;
+}
+
+.profile-container{
+display:flex;
+gap:30px;
+padding:50px;
+}
+
+.profile-card{
+width:300px;
+background:#fff;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.profile-card img{
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:20px;
+}
+
+.profile-card h2{
+color:#8B5E3C;
+}
+
+.profile-card p{
+margin:10px 0 20px;
+color:#666;
+}
+
+.profile-card button{
+background:#8B5E3C;
+color:#fff;
+border:none;
+padding:12px 25px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.profile-details{
+flex:1;
+background:#fff;
+padding:40px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.profile-details h1{
+margin-bottom:30px;
+color:#8B5E3C;
+}
+
+.info{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.box{
+display:flex;
+flex-direction:column;
+}
+
+.box label{
+margin-bottom:8px;
+font-weight:600;
+}
+
+.box input,
+.box textarea{
+padding:12px;
+border:1px solid #ccc;
+border-radius:8px;
+outline:none;
+}
+
+.buttons{
+margin-top:30px;
+display:flex;
+gap:20px;
+}
+
+.save{
+background:#8B5E3C;
+color:#fff;
+border:none;
+padding:12px 25px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.logout{
+background:#d9534f;
+color:#fff;
+border:none;
+padding:12px 25px;
+border-radius:8px;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.profile-container{
+flex-direction:column;
+padding:20px;
+}
+
+.info{
+grid-template-columns:1fr;
+}
+
+.profile-card{
+width:100%;
+}
+
+}

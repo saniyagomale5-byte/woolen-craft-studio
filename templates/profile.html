@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/profile.css') }}">
+</head>
+<body>
+
+<div class="profile-box">
+
+    <img src="{{ url_for('static', filename='images/profile.png') }}"
+         alt="Profile" class="profile-img">
+
+    <h2>{{ user.name }}</h2>
+
+    <p><strong>Email:</strong> {{ user.email }}</p>
+
+    <p><strong>Phone:</strong> {{ user.phone }}</p>
+
+    <p><strong>Address:</strong> {{ user.address }}</p>
+
+    <div class="buttons">
+
+        <a href="{{ url_for('edit_profile') }}">
+            <button>Edit Profile</button>
+        </a>
+
+        <a href="{{ url_for('orders') }}">
+            <button>My Orders</button>
+        </a>
+
+        <a href="{{ url_for('wishlist') }}">
+            <button>Wishlist</button>
+        </a>
+
+        <a href="{{ url_for('cart') }}">
+            <button>Cart</button>
+        </a>
+
+        <a href="{{ url_for('logout') }}">
+            <button class="logout">Logout</button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

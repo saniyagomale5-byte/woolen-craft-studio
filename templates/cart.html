@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/cart.css') }}">
+</head>
+<body>
+
+<h1>🛒 Shopping Cart</h1>
+
+{% if products %}
+
+<table border="1" cellpadding="10">
+
+<tr>
+    <th>Image</th>
+    <th>Product</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Subtotal</th>
+    <th>Action</th>
+</tr>
+
+{% for product in products %}
+
+<tr>
+
+<td>
+    <img src="{{ url_for('static', filename='images/' + product.image) }}"
+         width="100">
+</td>
+
+<td>{{ product.name }}</td>
+
+<td>₹{{ product.price }}</td>
+
+<td>
+    <a href="/decrease/{{ product.id }}">
+        <button>-</button>
+    </a>
+
+    {{ product.quantity }}
+
+    <a href="/increase/{{ product.id }}">
+        <button>+</button>
+    </a>
+</td>
+
+<td>₹{{ product.subtotal }}</td>
+
+<td>
+    <a href="/remove-cart/{{ product.id }}">
+        <button>Remove</button>
+    </a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<h2>Total: ₹{{ total }}</h2>
+
+<br>
+
+<a href="/checkout">
+    <button>Proceed To Checkout</button>
+</a>
+
+{% else %}
+
+<h2>Your Cart is Empty 🛒</h2>
+
+{% endif %}
+<a href="/shop">
+    <button>Continue Shopping</button>
+</a>
+
+</body>
+</html>

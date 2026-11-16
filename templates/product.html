@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/product.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+    <h2>🧶 Woolen Craft Studio</h2>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/shop">Shop</a>
+        <a href="/cart">Cart</a>
+    </nav>
+</header>
+
+<section class="product">
+
+    <div class="left">
+
+        <img src="{{ url_for('static', filename='images/' + product.image) }}"
+             alt="{{ product.name }}">
+
+    </div>
+
+    <div class="right">
+
+        <h1>{{ product.name }}</h1>
+
+        <h2>₹{{ product.price }}</h2>
+
+        <p>{{ product.description }}</p>
+
+        <br>
+
+        <a href="/add-to-cart/{{ product.id }}">
+            <button>Add To Cart</button>
+        </a>
+
+        <a href="/add-to-wishlist/{{ product.id }}">
+            <button>❤️ Add To Wishlist</button>
+        </a>
+
+        <a href="/checkout">
+            <button>Buy Now</button>
+        </a>
+
+    </div>
+    
+    <h2>Write a Review</h2>
+
+<form action="{{ url_for('review', id=product.id) }}" method="POST">
+
+    <select name="rating" required>
+        <option value="5">⭐⭐⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="1">⭐</option>
+    </select>
+
+    <br><br>
+
+    <textarea
+        name="comment"
+        placeholder="Write your review..."
+        required>
+    </textarea>
+
+    <br><br>
+
+    <button type="submit">
+        Submit Review
+    </button>
+
+</form>
+
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <h1>👋 Welcome, Saniya</h1>
+    <p>Woolen Craft Studio Dashboard</p>
+
+    <!-- Statistics -->
+
+    <div class="stats">
+
+        <div class="card">
+            <h2>{{ total_products }}</h2>  
+            <span>🛍️ Products</span>
+        </div>
+
+        <div class="card">
+            <h2>{{ total_wishlist }}</h2>  
+            <span>❤️ Wishlist</span>
+        </div>
+
+        <div class="card">
+            <h2>{{ total_cart }}</h2> 
+            <span>🛒 Cart</span>
+        </div>
+
+        <div class="card">
+            <h2>{{ total_orders }}</h2>
+            <span>📦 Orders</span>
+        </div>
+
+    </div>
+
+    <!-- Menu -->
+
+    <div class="menu">
+
+        <a href="{{ url_for('shop') }}">🛍️ Shop</a>
+
+        <a href="{{ url_for('wishlist') }}">❤️ Wishlist</a>
+
+        <a href="{{ url_for('cart') }}">🛒 Cart</a>
+
+        <a href="{{ url_for('orders') }}">📦 Orders</a>
+
+        <a href="{{ url_for('profile') }}">👤 Profile</a>
+
+        <a href="{{ url_for('logout') }}">🚪 Logout</a>
+
+    </div>
+
+    <!-- Recent Orders -->
+
+    <div class="recent">
+
+        <h2>Recent Orders</h2>
+
+        <table>
+
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>Wall Hanging</td>
+                <td>₹599</td>
+                <td>Delivered</td>
+            </tr>
+
+            <tr>
+                <td>Wool Basket</td>
+                <td>₹399</td>
+                <td>Processing</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>
